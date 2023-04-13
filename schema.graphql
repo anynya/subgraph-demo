@@ -1,5 +1,11 @@
-type ExampleEntity @entity {
-  id: Bytes!
-  count: BigInt!
-  param0: BigInt! # uint256
+type Campaign @entity {
+  id: ID!
+  receiver: Bytes! # address
+  goal: BigInt! # uint256
+}
+
+type Bid @entity {
+    id: ID!
+    funder: Bytes!
+    amount: BigInt!
 }
